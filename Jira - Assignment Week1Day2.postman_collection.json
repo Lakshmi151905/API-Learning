@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "43725774-0cc1-4ea2-ba85-025e206dae20",
+		"name": "Jira - Assignment Week1Day2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All the issues in Jira",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?JQL=project=\"AP\"",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "JQL",
+							"value": "project=\"AP\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All the issues that is created within 24 hours",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://restapijira.atlassian.net/rest/api/2/search?JQL=project=AP%26created >= -24h",
+					"protocol": "https",
+					"host": [
+						"restapijira",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "JQL",
+							"value": "project=AP%26created >= -24h"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "oGK2R3CyyDS6FPZzBptp497F",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "RestAPIJira@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
